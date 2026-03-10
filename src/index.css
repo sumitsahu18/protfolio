@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+.err{
+  color: red;
+}
+
+.blob {
+ 
+    overflow: hidden;
+  animation: blobAnimate 3s infinite ease-in-out;
+}
+
+.blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes blobAnimate {
+  0% {
+    border-bottom-left-radius: 33.6033% 57.7321%;
+    border-bottom-right-radius: 66.3967% 39.2229%;
+    border-top-left-radius: 43.2847% 42.2679%;
+    border-top-right-radius: 56.7153% 60.7771%;
+  }
+
+  50% {
+    border-bottom-left-radius: 60% 40%;
+    border-bottom-right-radius: 40% 60%;
+    border-top-left-radius: 55% 45%;
+    border-top-right-radius: 45% 55%;
+  }
+
+  100% {
+    border-bottom-left-radius: 33.6033% 57.7321%;
+    border-bottom-right-radius: 66.3967% 39.2229%;
+    border-top-left-radius: 43.2847% 42.2679%;
+    border-top-right-radius: 56.7153% 60.7771%;
+  }
+}
+
+
+ @keyframes updown {
+  0%{
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+@keyframes reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-reverse {
+  animation: slide 30s linear infinite reverse;
+}
